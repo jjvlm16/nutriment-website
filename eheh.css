@@ -1,0 +1,369 @@
+*{
+    margin:0;
+    padding:0;
+}
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.box{
+    
+    background-image: url(malnu.jpg);
+    background-position: center;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+    line-height: 2;
+}
+h3{
+    font-size: 15px;
+    font-weight: bold;
+    padding: 20px 0;
+}
+.input label{
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+}
+.input input{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #4f7df9;
+    border-radius: 10px;
+    padding: 6px 0;
+    text-align: center;
+}
+button{
+    background-color: #4f7df9;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px 0;    
+    width: 50%;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    transition:  .2s ease;
+}
+button:hover{
+    background-color: rgb(10, 123, 216);
+}
+.result{
+    padding: 20px 10px;
+}
+.bmi{
+    font-size: 30px;
+    font-weight: 600;
+    color: #f94f4f;
+}
+.comment span{
+    color: #f94f4f;
+    font-weight: 600;
+}
+
+.btn{
+    align-items: center;
+}
+
+body{
+    min-height: 100vh;
+    background-image:url(backgorund-image.jpg);
+    background-size: cover;
+    background-repeat: auto;
+    background-position: center;
+}
+
+nav{
+    background-color: rgb(105, 128, 255);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li{
+    height: 50px;
+}
+
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+nav a:hover{
+    background-color: #f0f0f0;
+}
+
+nav li:first-child{
+    margin-right: auto;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100px;
+}
+
+.sidebar a{
+    width: 100px;
+}
+
+@media(max-width: 800px){
+    .hideOnMobile{
+        display: none;
+    }
+}
+
+@media(max-width: 400px){
+    .sidebar{
+        width: 100%;
+    }
+}
+
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f9fb;
+    transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader-hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after{
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: #7449f5;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+    from{
+        transform: rotate(0turn);
+    }
+    to{
+        transform: rotate(1turn);
+    }
+}
+
+body{
+    background-color: #12172b;
+}
+
+.tainercon {
+    margin: 20px 40px;
+    color: white;
+}
+
+.heading{
+    font-size: 50px;
+    text-align: center;
+    color: black;
+}
+
+.heading span {
+    font-style: italic;
+    font-size: 30px;
+}
+
+.profiles {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 80px;
+}
+
+
+.profile {
+    flex-basis: 250px;
+}
+
+.profile .profile-img {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.user-name1 {
+    margin-top: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    color: black;
+}
+.user-name2 {
+    margin-top: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    color: green;
+}
+.user-name3 {
+    margin-top: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    color: blue;
+}
+.user-name4 {
+    margin-top: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    color: yellow;
+}
+
+.profile h5{
+    font-size: 15px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    color: gold;
+}
+
+.profile p {
+    font-size: 16px;
+    margin-top: 20px;
+    color: #12172b;
+    text-align: justify;
+}
+
+@media only screen and (max-width: 800px) {
+    .profiles {
+        flex-direction: column;
+    }
+    .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .profile p {
+        text-align: center;
+        margin: 20px 60px 50px 60px;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .heading {
+        font-size: 40px;
+        color: black;
+        text-align: center;
+    }
+    .heading span{
+        font-size: 15px;
+    }
+    .profiles {
+        margin: 20px 0;
+    }
+    .profile p {
+        margin: 20px 10px 80px 10px;
+    }
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+
+section {
+    min-height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 3rem;
+    margin: 2rem 0rem;
+}
+
+.faq {
+    max-width: 900px;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #fff;
+    cursor: pointer;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.question h3 {
+    font-size: 1.8rem;
+}
+
+.answer {
+    max-height: 0;
+    font-size: 20px;
+    overflow: hidden;
+    transition: max-height 1.4s ease;
+}
+
+.answer p {
+    padding-top: 1rem;
+    line-height: 1;
+    font-size: 1.2rem;
+}
+
+.faq.active .answer {
+    max-height: 300px;
+    animation: fade 1s ease-in-out;
+}
+
+.faq.active svg {
+    transform: rotate(180deg);
+}
+
+svg{
+    transition: transform .5s ease-in;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

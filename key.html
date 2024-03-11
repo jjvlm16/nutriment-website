@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Reccomendation</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="eheh.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url(background.jpg); 
+            background-size: cover;
+            background-position: center;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: black;
+            line-height: 1.6;
+        }
+
+        .gain-bmi {
+            background-color: #d6eaf8;
+        }
+
+        .lose-bmi {
+            background-color: #f9d7d7;
+        }
+
+        .maintain-bmi {
+            background-color: #e8f6ef;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+        .underweight-icon {
+            width: 20px;
+            height: 20px;
+            background-color: #e74c3c;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        .normal-weight-icon {
+            width: 20px;
+            height: 20px;
+            background-color: #2ecc71;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        .overweight-icon {
+            width: 20px;
+            height: 20px;
+            background-color: #f39c12;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        .obese-icon {
+            width: 20px;
+            height: 20px;
+            background-color: #e67e22;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 5px;
+        }
+        .popup-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="hehe.html">Home</a></li>
+            <li><a href="help.html">FAQs</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+         <ul>
+            <li><a href="hehe.html">NUTRIMENT</a></li>
+            <li class="hideOnMobile"><a href="hehe.html">Home</a></li>
+            <li class="hideOnMobile"><a href="help.html">FAQs</a></li>
+            <li class="hideOnMobile"><a href="about.html">About Us</a></li>
+            <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+
+    <header>
+        <h1>Here are some Recommendations that might help you</h1>
+    </header>
+
+    <section>
+        <h2>BMI Weight Status Table</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>BMI Range</th>
+                    <th>Weight Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Below 18.5</td>
+                    <td>
+                        <span class="underweight-icon"></span> Underweight
+                    </td>
+                </tr>
+                <tr>
+                    <td>18.5 - 24.9</td>
+                    <td>
+                        <span class="normal-weight-icon"></span> Normal Weight
+                    </td>
+                </tr>
+                <tr>
+                    <td>25 - 29.9</td>
+                    <td><span class="overweight-icon"></span> Overweight</td>
+                </tr>
+                <tr>
+                    <td>30 and above</td>
+                    <td><span class="obese-icon"></span> Obese</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <section>
+
+        <p>Welcome to Nutriment your BMI Management Recommendations, your go-to resource for achieving and maintaining a healthy Body Mass Index (BMI). Whether you're looking to gain, lose, or maintain weight, our expert-backed tips and guidelines can help you on your wellness journey.
+        
+        Explore personalized recommendations for each BMI category, accompanied by insightful information and practical advice. From nutrition tips to fitness suggestions, we've compiled a comprehensive guide to support your health goals.
+        
+        Take advantage of our BMI Weight Status Table and accompanying images to easily understand and assess your current weight status. Additionally, find valuable references from reputable sources to deepen your understanding of BMI and overall well-being.
+       </p>
+
+       <img src="bmi-chart.jpg">
+    </section>
+    
+    </section>
+
+    <section class="gain-bmi">
+        <h2>Tips for Gaining BMI</h2>
+        <img src="gain-weight-image.jpg" alt="Gaining BMI">
+        <p>1. Consume a balanced diet with a slight caloric surplus.</p>
+        <p>2. Include a mix of carbohydrates, proteins, and healthy fats in your meals.</p>
+        <p>3. Engage in regular strength training exercises to build muscle mass.</p>
+        <p>4. Monitor your BMI regularly and adjust your diet and exercise accordingly.</p>
+        <p>5. Consider consulting with a registered dietitian for personalized nutrition guidance.</p>
+        <p>6. Include nutrient-rich snacks between meals to increase overall calorie intake.</p>
+        <p>7. Choose whole grains, lean proteins, and dairy for a nutrient-dense diet.</p>
+        <p>8. Stay consistent with your eating schedule to ensure regular nutrient intake.</p>
+        <p>9. Gradually increase portion sizes to avoid overwhelming your digestive system.</p>
+        <p>10. Focus on overall health and muscle development rather than just weight gain.</p>
+        <div class="sources">
+            <h3>Additional Reading:</h3>
+            <ul>
+                <li><a href="https://www.who.int/">World Health Organization (WHO)</a></li>
+                <li><a href="https://www.cdc.gov/">Centers for Disease Control and Prevention (CDC)</a></li>
+                <li><a href="https://www.nhs.uk/live-well/eat-well/how-to-gain-weight-safely/">NHS - How to Gain Weight Safely</a></li>
+                <li><a href="https://www.healthline.com/nutrition/how-to-gain-weight#tips">Healthline - How to Gain Weight Fast and Safely</a></li>
+            </ul>
+        </div>
+
+    </section>
+
+    <section class="lose-bmi">
+        <h2>Tips for Losing BMI</h2>
+        <img src="lose-weight-image.jpg" alt="Losing BMI">
+        <p>1. Create a calorie deficit by consuming fewer calories than you burn.</p>
+        <p>2. Focus on a balanced diet with an emphasis on nutrient-dense foods.</p>
+        <p>3. Include regular aerobic exercises to help burn excess fat.</p>
+        <p>4. Monitor your BMI regularly and make adjustments to your lifestyle as needed.</p>
+        <p>5. Stay hydrated and aim for a variety of colorful fruits and vegetables for optimal nutrition.</p>
+        <p>6. Incorporate high-intensity interval training (HIIT) for effective fat burning.</p>
+        <p>7. Practice mindful eating to avoid emotional or stress-related overeating.</p>
+        <p>8. Include plenty of fiber-rich foods to promote satiety and digestive health.</p>
+        <p>9. Get adequate sleep, as lack of sleep can impact metabolism and weight loss efforts.</p>
+        <p>10. Consult with a healthcare professional before starting any drastic weight loss plan.</p>
+
+        <div class="sources">
+            <h3>Additional Reading:</h3>
+            <ul> 
+                <li><a href="https://www.hsph.harvard.edu/nutritionsource/healthy-weight/">Harvard T.H. Chan School of Public Health - Maintaining a Healthy Weight</a></li>               
+                <li><a href="https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/expert-answers/healthy-diet/faq-20058423">Mayo Clinic - Weight Loss</a></li>
+                <li><a href="https://www.choosemyplate.gov/">ChooseMyPlate - USDA</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/pubmed/789012">Dietary Strategies for Weight Loss - PubMed</a></li>
+        </div>
+
+    </section>
+
+    <section class="maintain-bmi">
+        <h2>Tips for Maintaining BMI</h2>
+        <img src="maintain-weight-image.jpeg" alt="Maintaining BMI">
+        <p>1. Balance your caloric intake with your energy expenditure.</p>
+        <p>2. Include a variety of whole foods in your diet for optimal nutrition.</p>
+        <p>3. Engage in a combination of aerobic and strength training exercises.</p>
+        <p>4. Regularly assess your BMI and make adjustments to maintain a healthy range.</p>
+        <p>5. Prioritize sleep and stress management as they impact overall well-being.</p>
+        <p>6. Include regular physical activity, such as walking or cycling, in your routine.</p>
+        <p>7. Consume a diet rich in antioxidants from fruits and vegetables for overall health.</p>
+        <p>8. Avoid crash diets and focus on sustainable, long-term lifestyle changes.</p>
+        <p>9. Practice portion control to prevent overeating and maintain a stable weight.</p>
+        <p>10. Stay informed about nutritional trends and adjust your diet accordingly.</p>
+
+        <div class="sources">
+            <h3>Additional Reading:</h3>
+            <ul>
+               
+                <li><a href="https://medlineplus.gov/">MedlinePlus - National Library of Medicine</a></li>
+                <li><a href="https://www.sleepfoundation.org/">National Sleep Foundation</a></li>
+                <li><a href="https://www.hsph.harvard.edu/nutritionsource/healthy-weight/">Harvard T.H. Chan School of Public Health - Maintaining a Healthy Weight</a></li>
+                <li><a href="https://www.cdc.gov/healthyweight/index.html">Centers for Disease Control and Prevention (CDC) - Healthy Weight</a></li>
+            </ul>
+        </div>
+    </section>
+        
+    <div class="loader">
+    </div>
+
+    <script src="jjjj.js"></script>
+</body>
+</html>

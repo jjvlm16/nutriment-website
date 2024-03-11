@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUTRIMENT BMI CALCULATOR</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="eheh.css">
+</head>
+<body>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url(background.jpg); 
+            background-size: cover;
+            background-position: center;
+            color: #333;
+        }
+    </style>
+
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="hehe.html">Home</a></li>
+            <li><a href="help.html">FAQs</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+         <ul>
+            <li><a href="hehe.html">NUTRIMENT</a></li>
+            <li class="hideOnMobile"><a href="hehe.html">Home</a></li>
+            <li class="hideOnMobile"><a href="help.html">FAQs</a></li>
+            <li class="hideOnMobile"><a href="about.html">About Us</a></li>
+            <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+    <section>
+        <h2 class="title">FAQs</h2>
+
+        <div class="faq">
+            <div class="question">
+                <h3>What is Nutriment?</h3>
+
+                <svg width="15" height="10" viewBox="0 0 42 25">
+
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+                    
+                    </svg>
+            </div>
+            <div class="answer">
+                <p>Nutriment is a BMI (Body Mass Index) website calculator that computes the BMI of 
+                the user using metric system BMI = weight(kg) ÷ height(m)² with recommendations 
+                to improve, maintain and decrease the nutritional status of the user back to normal.</p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="question">
+                <h3>Why did you conduct this research?</h3>
+
+                <svg width="15" height="10" viewBox="0 0 42 25">
+
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+                    
+                    </svg>
+            </div>
+            <div class="answer">
+                <p>We have selected this topic due to an observed discrepancy in today's youth 
+                    where their weight and height often does not match to their age, resulting 
+                    in issues such as being underweight, overweight, or obese due to malnutrition. 
+                    As a result, we aim to conduct research to raise awareness among our peers about the importance of 
+                    health maintenance as it is our most valuable asset.</p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="question">
+                <h3>How does your website work?</h3>
+
+                <svg width="15" height="10" viewBox="0 0 42 25">
+
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+                    
+                    </svg>
+            </div>
+            <div class="answer">
+                <p>
+                    1 Measure your weight in kilograms (kg).
+                    2 Measure your height in meters (m).
+                    3 Square your height in meters (height x height).
+                    4 Divide your weight in kilograms by the square of your height to calculate BMI (weight / (height x height)).
+                    Interpret the BMI value as follows:
+                    - Below 18.5: Underweight
+                    - 18.5 - 24.9: Normal weight
+                    - 25 - 29.9: Overweight
+                    - 30 and above: Obese
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="loader"></div>
+
+<script src="iiii.js"></script>
+</body>
+</html>
